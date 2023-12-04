@@ -10,7 +10,7 @@ public class Die6
    * Contains the current value of the die
    */
   private int value;
-  private int SIDES = 20;
+  private int SIDES = 6;
 
   /**
    * Constructor to do an initial roll to set the first value
@@ -32,7 +32,7 @@ public class Die6
    * Note that roll does NOT return the new value
    */
   public void roll() {
-    this.value = (int)(Math.random() * 20) + 1;
+    this.value = (int)(Math.random() * 6) + 1;
   }
   /**
    * Roll the die and return the new value
