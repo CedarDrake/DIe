@@ -6,6 +6,14 @@ public class Yahtzee
     Die6 die3;
     Die6 die4;
     Die6 die5;
+    int die1value = 0;
+    int count1 = 0;
+    int count2 = 0;
+    int count3 = 0;
+    int count4 = 0;
+    int count5 = 0;
+    private String summerize;
+    private String toString;
     public Yahtzee()
     {
         die1 = new Die6();
@@ -23,12 +31,14 @@ public class Yahtzee
         die5.roll();
     }
     
-    public int getValue() {
-        return die1.getValue() + die2.getValue() + die3.getValue() + die4.getValue() + die5.getValue();
+    public String summerize() {
+        die1value = die1.getValue();
+        for (int i = 0; i <= 6; i++) {
+            
+        }
+        summerize = "Fuck this shit";
+        return summerize;
     }
     
-    public int rollandGetValue() {
-        roll();
-        return getValue();
-    }
+    
 }
