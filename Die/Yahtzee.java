@@ -1,42 +1,35 @@
 
 public class Yahtzee
 {
-    Die6 die1;
-    Die6 die2;
-    Die6 die3;
-    Die6 die4;
-    Die6 die5;
-    int die1value = 0;
-    int count1 = 0;
-    int count2 = 0;
-    int count3 = 0;
-    int count4 = 0;
-    int count5 = 0;
+    private Die6[] dice5 = {
+        new Die6(),
+        new Die6(),
+        new Die6(),
+        new Die6(),
+        new Die6(),
+    };
     private String summerize;
     private String toString;
     public Yahtzee()
     {
-        die1 = new Die6();
-        die2 = new Die6();
-        die3 = new Die6();
-        die4 = new Die6();
-        die5 = new Die6();
+        
     }
 
     public void roll() {
-        die1.roll();
-        die2.roll();
-        die3.roll();
-        die4.roll();
-        die5.roll();
+        for (int i = 0; i < dice5.length; i++) {
+            dice5[i].roll();
+        }
     }
     
     public String summerize() {
-        die1value = die1.getValue();
-        for (int i = 0; i <= 6; i++) {
-            
+        int [] count = {0, 0, 0, 0, 0, 0};
+        String value = "";
+        for (int i = 0; i < dice5.length; i++) {
+            count[dice5[i].getValue()-1]++;
         }
-        summerize = "Fuck this shit";
+        for (int i = 1; i <= dice5.length; i++) {
+            summerize += i + "
+        }
         return summerize;
     }
     
