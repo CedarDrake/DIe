@@ -28,10 +28,19 @@ public class Yahtzee
             count[dice5[i].getValue()-1]++;
         }
         for (int i = 1; i <= dice5.length; i++) {
-            summerize += i + "
+            value += i + "-" + count[i-1];
+            if (i <= count.length) {
+                value += "; ";
+            }
         }
-        return summerize;
+        return value;
     }
     
-    
+    public String toString() {
+        String value = "Dice values:";
+        for (int i = 0; i < dice5.length; i++) {
+            value += " " + dice5[i].getValue();
+        }
+        return value;
+    }
 }

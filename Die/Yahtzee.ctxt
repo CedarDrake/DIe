@@ -6,4 +6,6 @@ comment2.params=
 comment2.target=void\ roll()
 comment3.params=
 comment3.target=java.lang.String\ summerize()
-numComments=4
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5
