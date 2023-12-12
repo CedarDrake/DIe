@@ -10,14 +10,16 @@ public class Yahtzee
     };
     private String summerize;
     private String toString;
-    public Yahtzee()
-    {
-        
-    }
-
+    
     public void roll() {
         for (int i = 0; i < dice5.length; i++) {
             dice5[i].roll();
+        }
+    }
+    
+    public void roll(int dieNumber) {
+        if (dieNumber > 0 && dieNumber <= dice5.length) {
+            dice5[dieNumber-1].roll();
         }
     }
     
@@ -25,10 +27,10 @@ public class Yahtzee
         int [] count = {0, 0, 0, 0, 0, 0};
         String value = "";
         for (int i = 0; i < dice5.length; i++) {
-            count[dice5[i].getValue()-1]++;
+            count[dice5[i].getValue()-1] += 1;
         }
-        for (int i = 1; i <= dice5.length; i++) {
-            value += i + "-" + count[i-1];
+        for (int i = 0; i <= dice5.length; i++) {
+            value += (i + 1) + "-" + count[i];
             if (i <= count.length) {
                 value += "; ";
             }

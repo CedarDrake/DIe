@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Yahtzee
 comment1.params=
-comment1.target=Yahtzee()
-comment2.params=
-comment2.target=void\ roll()
+comment1.target=void\ roll()
+comment2.params=dieNumber
+comment2.target=void\ roll(int)
 comment3.params=
 comment3.target=java.lang.String\ summerize()
 comment4.params=
